@@ -37,6 +37,10 @@ define("ember-quickstart/tests/lint/app.lint-test", [], function () {
     assert.expect(1);
     assert.ok(true, 'routes/about.js should pass ESLint\n\n');
   });
+  QUnit.test('routes/contact.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/contact.js should pass ESLint\n\n');
+  });
 });
 define("ember-quickstart/tests/lint/templates.template.lint-test", [], function () {
   "use strict";
@@ -49,6 +53,10 @@ define("ember-quickstart/tests/lint/templates.template.lint-test", [], function 
   QUnit.test('ember-quickstart/templates/application.hbs', function (assert) {
     assert.expect(1);
     assert.ok(true, 'ember-quickstart/templates/application.hbs should pass TemplateLint.\n\n');
+  });
+  QUnit.test('ember-quickstart/templates/contact.hbs', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'ember-quickstart/templates/contact.hbs should pass TemplateLint.\n\n');
   });
 });
 define("ember-quickstart/tests/lint/tests.lint-test", [], function () {
@@ -67,6 +75,10 @@ define("ember-quickstart/tests/lint/tests.lint-test", [], function () {
     assert.expect(1);
     assert.ok(true, 'unit/routes/about-test.js should pass ESLint\n\n');
   });
+  QUnit.test('unit/routes/contact-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/contact-test.js should pass ESLint\n\n');
+  });
 });
 define("ember-quickstart/tests/test-helper", ["ember-quickstart/app", "ember-quickstart/config/environment", "@ember/test-helpers", "ember-qunit"], function (_app, _environment, _testHelpers, _emberQunit) {
   "use strict";
@@ -81,6 +93,17 @@ define("ember-quickstart/tests/unit/routes/about-test", ["qunit", "ember-qunit"]
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
       let route = this.owner.lookup('route:about');
+      assert.ok(route);
+    });
+  });
+});
+define("ember-quickstart/tests/unit/routes/contact-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Route | contact', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:contact');
       assert.ok(route);
     });
   });
