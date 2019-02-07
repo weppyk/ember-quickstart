@@ -1,20 +1,20 @@
 import Route from '@ember/routing/route';
+import $ from 'jquery';
 
 export default Route.extend({
     model() {
-        Ember.$.ajax( {
-
+        $.ajax({
             method : 'GET',
-	        url : 'https://api.zonky.cz/loans/marketplace',
-        
-	        headers: {
+            url : 'https://api.zonky.cz/loans/marketplace',
+            headers: {
                 //"Authorization" : "Basic abcdef==",
-                "User-Agent":"ember-quickstart/0.3 "
-            },
-        }).then((response) => {
-
-            console.log(“response”);
+                "User-Agent":"ember-quickstart/0.3 (https://github.com/weppyk/ember-quickstart)"
+            }
         })
+        .then((response) => {
+            return response;
+        });
+    }
 //console.log 1(JSON.stringify(response));
 
 });

@@ -373,12 +373,26 @@
 
   var _default = Ember.Route.extend({
     model() {
-      this.get('https://api.zonky.cz/loans/marketplace', () => {
-        return [];
+      Ember.$.ajax({
+        method: 'GET',
+        url: 'https://api.zonky.cz/loans/marketplace',
+        headers: {
+          //"Authorization" : "Basic abcdef==",
+          "User-Agent": "ember-quickstart/0.3 (https://github.com/weppyk/ember-quickstart)"
+        }
+      }).then(response => {
+        return response;
       });
-    }
+    } //console.log 1(JSON.stringify(response));
+
 
   });
+  /*this.get('https://api.zonky.cz/loans/marketplace',()=>{
+      return [];
+  });
+  }
+  });*/
+
   /*import JSONAPIAdapter from 'ember-data/adapters/json-api';
   
   export default JSONAPIAdapter.extend({
@@ -538,7 +552,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("ember-quickstart/app")["default"].create({"name":"ember-quickstart","version":"0.0.0+f42628e5"});
+            require("ember-quickstart/app")["default"].create({"name":"ember-quickstart","version":"0.3+8d8d17ef"});
           }
         
 //# sourceMappingURL=ember-quickstart.map
