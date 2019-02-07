@@ -1,5 +1,16 @@
 'use strict';
 
+define("ember-quickstart/tests/acceptance/list-rentals-test", ["qunit", "@ember/test-helpers", "ember-qunit"], function (_qunit, _testHelpers, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Acceptance | list rentals', function (hooks) {
+    (0, _emberQunit.setupApplicationTest)(hooks);
+    (0, _qunit.test)('visiting /', async function (assert) {
+      await (0, _testHelpers.visit)('/');
+      assert.equal((0, _testHelpers.currentURL)(), '/');
+    });
+  });
+});
 define("ember-quickstart/tests/lint/app.lint-test", [], function () {
   "use strict";
 
@@ -30,6 +41,10 @@ define("ember-quickstart/tests/lint/tests.lint-test", [], function () {
   "use strict";
 
   QUnit.module('ESLint | tests');
+  QUnit.test('acceptance/list-rentals-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'acceptance/list-rentals-test.js should pass ESLint\n\n');
+  });
   QUnit.test('test-helper.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'test-helper.js should pass ESLint\n\n');

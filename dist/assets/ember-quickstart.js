@@ -295,8 +295,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "pNPw2GHK",
-    "block": "{\"symbols\":[],\"statements\":[[1,[21,\"welcome-page\"],false],[0,\"\\n\"],[0,\"\\n\"],[1,[21,\"outlet\"],false]],\"hasEval\":false}",
+    "id": "UwxbthyY",
+    "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[1,[21,\"outlet\"],false]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-quickstart/templates/application.hbs"
     }
@@ -327,7 +327,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("ember-quickstart/app")["default"].create({"name":"ember-quickstart","version":"0.0.0+43510e68"});
+            require("ember-quickstart/app")["default"].create({"name":"ember-quickstart","version":"0.1+90c9b10e"});
           }
         
 //# sourceMappingURL=ember-quickstart.map
