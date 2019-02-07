@@ -20,13 +20,16 @@ define("ember-quickstart/tests/acceptance/list-rentals-test", ["qunit", "ember-q
       await (0, _testHelpers.click)(".menu-contact");
       assert.equal((0, _testHelpers.currentURL)(), '/contact', 'should navigate to contact');
     });
-    (0, _qunit.test)('should list available rentals.', async function (assert) {});
+    (0, _qunit.test)('should list available rentals.', async function (assert) {
+      await (0, _testHelpers.visit)('/');
+      assert.equal(this.element.querySelectorAll('.listing').length, 3, 'should display 3 listings');
+    });
     (0, _qunit.test)('should filter the list of rentals by city.', async function (assert) {});
     (0, _qunit.test)('should show details for a selected rental', async function (assert) {});
-    (0, _qunit.test)('visiting /', async function (assert) {
-      await (0, _testHelpers.visit)('/');
-      assert.equal((0, _testHelpers.currentURL)(), '/');
-    });
+    /* test('visiting /', async function(assert) {
+       await visit('/');
+        assert.equal(currentURL(), '/');
+     });*/
   });
 });
 define("ember-quickstart/tests/lint/app.lint-test", [], function () {
@@ -80,7 +83,7 @@ define("ember-quickstart/tests/lint/templates.template.lint-test", [], function 
   });
   QUnit.test('ember-quickstart/templates/contact.hbs', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'ember-quickstart/templates/contact.hbs should pass TemplateLint.\n\nember-quickstart/templates/contact.hbs\n  17:4  error  Incorrect indentation for `{{#link-to}}` beginning at L17:C4. Expected `{{#link-to}}` to be at an indentation of 2 but was found at 4.  block-indentation\n  19:14  error  Incorrect indentation for `link-to` beginning at L17:C4. Expected `{{/link-to}}` ending at L19:C14 to be at an indentation of 4 but was found at 2.  block-indentation\n  18:0  error  Incorrect indentation for `    About\n` beginning at L18:C0. Expected `    About\n` to be at an indentation of 6 but was found at 4.  block-indentation\n');
+    assert.ok(false, 'ember-quickstart/templates/contact.hbs should pass TemplateLint.\n\nember-quickstart/templates/contact.hbs\n  18:4  error  Incorrect indentation for `{{#link-to}}` beginning at L18:C4. Expected `{{#link-to}}` to be at an indentation of 2 but was found at 4.  block-indentation\n  20:14  error  Incorrect indentation for `link-to` beginning at L18:C4. Expected `{{/link-to}}` ending at L20:C14 to be at an indentation of 4 but was found at 2.  block-indentation\n  19:0  error  Incorrect indentation for `    About\n` beginning at L19:C0. Expected `    About\n` to be at an indentation of 6 but was found at 4.  block-indentation\n');
   });
   QUnit.test('ember-quickstart/templates/index.hbs', function (assert) {
     assert.expect(1);
@@ -101,7 +104,7 @@ define("ember-quickstart/tests/lint/tests.lint-test", [], function () {
   QUnit.module('ESLint | tests');
   QUnit.test('acceptance/list-rentals-test.js', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'acceptance/list-rentals-test.js should pass ESLint\n\n30:58 - \'assert\' is defined but never used. (no-unused-vars)\n33:70 - \'assert\' is defined but never used. (no-unused-vars)\n36:69 - \'assert\' is defined but never used. (no-unused-vars)');
+    assert.ok(false, 'acceptance/list-rentals-test.js should pass ESLint\n\n35:70 - \'assert\' is defined but never used. (no-unused-vars)\n38:69 - \'assert\' is defined but never used. (no-unused-vars)');
   });
   QUnit.test('test-helper.js', function (assert) {
     assert.expect(1);

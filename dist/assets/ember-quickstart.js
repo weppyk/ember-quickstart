@@ -327,7 +327,39 @@
   });
   _exports.default = void 0;
 
-  var _default = Ember.Route.extend({});
+  var _default = Ember.Route.extend({
+    model() {
+      return [{
+        id: 'grand-old-mansion',
+        title: 'Grand Old Mansion',
+        owner: 'Veruca Salt',
+        city: 'San Francisco',
+        category: 'Estate',
+        bedrooms: 15,
+        image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
+        description: 'This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests.'
+      }, {
+        id: 'urban-living',
+        title: 'Urban Living',
+        owner: 'Mike TV',
+        city: 'Seattle',
+        category: 'Condo',
+        bedrooms: 1,
+        image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg',
+        description: 'A commuters dream. This rental is within walking distance of 2 bus stops and the Metro.'
+      }, {
+        id: 'downtown-charm',
+        title: 'Downtown Charm',
+        owner: 'Violet Beauregarde',
+        city: 'Portland',
+        category: 'Apartment',
+        bedrooms: 3,
+        image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg',
+        description: 'Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet.'
+      }];
+    }
+
+  });
 
   _exports.default = _default;
 });
@@ -341,12 +373,24 @@
 
   var _default = Ember.Route.extend({
     model() {
-      return this.store.query('post', {
-        favorite: true
+      this.get('https://api.zonky.cz/loans/marketplace', () => {
+        return [];
       });
     }
 
   });
+  /*import JSONAPIAdapter from 'ember-data/adapters/json-api';
+  
+  export default JSONAPIAdapter.extend({
+  
+      model(){
+      
+          this.get('https://api.zonky.cz/loans/marketplace',()=>{
+              return [];
+          });
+      }
+  });*/
+
 
   _exports.default = _default;
 });
@@ -408,8 +452,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "/DriotEj",
-    "block": "{\"symbols\":[],\"statements\":[[7,\"div\"],[11,\"class\",\"jumbo\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"right tomster\"],[9],[10],[0,\"\\n  \"],[7,\"h2\"],[9],[0,\"Contact Us\"],[10],[0,\"\\n  \"],[7,\"p\"],[9],[0,\"\\n    Super Rentals Representatives would love to help you\"],[7,\"br\"],[9],[10],[0,\"\\n    choose a destination or answer any questions you may have.\\n  \"],[10],[0,\"\\n  \"],[7,\"address\"],[9],[0,\"\\n    Super Rentals HQ\\n    \"],[7,\"p\"],[9],[0,\"\\n      1212 Test Address Avenue\"],[7,\"br\"],[9],[10],[0,\"\\n      Testington, OR 97233\\n    \"],[10],[0,\"\\n    \"],[7,\"a\"],[11,\"href\",\"tel:503.555.1212\"],[9],[0,\"+1 (503) 555-1212\"],[10],[7,\"br\"],[9],[10],[0,\"\\n    \"],[7,\"a\"],[11,\"href\",\"mailto:superrentalsrep@emberjs.com\"],[9],[0,\"superrentalsrep@emberjs.com\"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"],[4,\"link-to\",[\"about\"],[[\"class\"],[\"button\"]],{\"statements\":[[0,\"    About\\n\"]],\"parameters\":[]},null],[10]],\"hasEval\":false}",
+    "id": "pzTVbnU5",
+    "block": "{\"symbols\":[],\"statements\":[[7,\"div\"],[11,\"class\",\"jumbo\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"right tomster\"],[9],[10],[0,\"\\n  \"],[7,\"h2\"],[9],[0,\"Contact Us\"],[10],[0,\"\\n  \"],[7,\"p\"],[9],[0,\"\\n    Super Rentals Representatives would love to help you\"],[7,\"br\"],[9],[10],[0,\"\\n    choose a destination or answer any questions you may have.\\n  \"],[10],[0,\"\\n  \"],[7,\"address\"],[9],[0,\"\\n    Super Rentals HQ\\n    \"],[7,\"p\"],[9],[0,\"\\n      1212 Test Address Avenue\"],[7,\"br\"],[9],[10],[0,\"\\n      Testington, OR 97233\\n    \"],[10],[0,\"\\n    \"],[7,\"a\"],[11,\"href\",\"tel:503.555.1212\"],[9],[0,\"+1 (503) 555-1212\"],[10],[7,\"br\"],[9],[10],[0,\"\\n    \"],[7,\"a\"],[11,\"href\",\"mailto:superrentalsrep@emberjs.com\"],[9],[0,\"superrentalsrep@emberjs.com\"],[10],[0,\"\\n  \"],[10],[0,\"\\n\\n\"],[4,\"link-to\",[\"about\"],[[\"class\"],[\"button\"]],{\"statements\":[[0,\"    About\\n\"]],\"parameters\":[]},null],[10]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-quickstart/templates/contact.hbs"
     }
@@ -444,8 +488,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "8X7eNJGd",
-    "block": "{\"symbols\":[],\"statements\":[[7,\"div\"],[11,\"class\",\"jumbo\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"right tomster\"],[9],[10],[0,\"\\n  \"],[7,\"h2\"],[9],[0,\"Welcome!\"],[10],[0,\"\\n  \"],[7,\"p\"],[9],[0,\"We hope you find exactly what you're looking for in a place to stay.\"],[10],[0,\"\\n\"],[4,\"link-to\",[\"about\"],[[\"class\"],[\"button\"]],{\"statements\":[[0,\"    About Us\\n\"]],\"parameters\":[]},null],[10]],\"hasEval\":false}",
+    "id": "vFfGUS8B",
+    "block": "{\"symbols\":[\"rental\"],\"statements\":[[7,\"div\"],[11,\"class\",\"jumbo\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"right tomster\"],[9],[10],[0,\"\\n  \"],[7,\"h2\"],[9],[0,\"Welcome!\"],[10],[0,\"\\n  \"],[7,\"p\"],[9],[0,\"We hope you find exactly what you're looking for in a place to stay.\"],[10],[0,\"\\n\"],[4,\"link-to\",[\"about\"],[[\"class\"],[\"button\"]],{\"statements\":[[0,\"    About Us\\n\"]],\"parameters\":[]},null],[10],[0,\"\\n\"],[4,\"each\",[[22,0,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[7,\"article\"],[11,\"class\",\"listing\"],[9],[0,\"\\n    \"],[7,\"div\"],[11,\"class\",\"details\"],[9],[0,\"\\n      \"],[7,\"h3\"],[9],[1,[22,1,[\"title\"]],false],[10],[0,\"\\n      \"],[7,\"div\"],[11,\"class\",\"detail owner\"],[9],[0,\"\\n        \"],[7,\"span\"],[9],[0,\"Owner:\"],[10],[0,\" \"],[1,[22,1,[\"owner\"]],false],[0,\"\\n      \"],[10],[0,\"\\n      \"],[7,\"div\"],[11,\"class\",\"detail type\"],[9],[0,\"\\n        \"],[7,\"span\"],[9],[0,\"Type:\"],[10],[0,\" \"],[1,[22,1,[\"category\"]],false],[0,\"\\n      \"],[10],[0,\"\\n      \"],[7,\"div\"],[11,\"class\",\"detail location\"],[9],[0,\"\\n        \"],[7,\"span\"],[9],[0,\"Location:\"],[10],[0,\" \"],[1,[22,1,[\"city\"]],false],[0,\"\\n      \"],[10],[0,\"\\n      \"],[7,\"div\"],[11,\"class\",\"detail bedrooms\"],[9],[0,\"\\n        \"],[7,\"span\"],[9],[0,\"Number of bedrooms:\"],[10],[0,\" \"],[1,[22,1,[\"bedrooms\"]],false],[0,\"\\n      \"],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"]],\"parameters\":[1]},null]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-quickstart/templates/rentals.hbs"
     }
@@ -462,8 +506,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "0WbY6Zw4",
-    "block": "{\"symbols\":[\"post\"],\"statements\":[[7,\"h1\"],[9],[0,\"Favorite Posts\"],[10],[0,\"\\n\"],[4,\"each\",[[23,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[7,\"p\"],[9],[1,[22,1,[\"body\"]],false],[10],[0,\"\\n\"]],\"parameters\":[1]},null]],\"hasEval\":false}",
+    "id": "UTr5XA2j",
+    "block": "{\"symbols\":[\"post\"],\"statements\":[[7,\"h1\"],[9],[0,\"Favorite Posts\"],[10],[0,\"\\n\"],[4,\"each\",[[22,0,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[7,\"p\"],[9],[1,[22,1,[\"id\"]],false],[10],[0,\"\\n\"]],\"parameters\":[1]},null]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-quickstart/templates/zonky.hbs"
     }
@@ -494,7 +538,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("ember-quickstart/app")["default"].create({"name":"ember-quickstart","version":"0.2+50a8b428"});
+            require("ember-quickstart/app")["default"].create({"name":"ember-quickstart","version":"0.0.0+f42628e5"});
           }
         
 //# sourceMappingURL=ember-quickstart.map

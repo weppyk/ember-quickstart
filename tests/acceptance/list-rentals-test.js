@@ -28,6 +28,8 @@ module('Acceptance | list rentals', function(hooks) {
   });
 
   test('should list available rentals.', async function (assert) {
+    await visit('/');
+    assert.equal(this.element.querySelectorAll('.listing').length, 3, 'should display 3 listings');  
   });
 
   test('should filter the list of rentals by city.', async function (assert) {
@@ -37,9 +39,9 @@ module('Acceptance | list rentals', function(hooks) {
   });
 
 
-  test('visiting /', async function(assert) {
+ /* test('visiting /', async function(assert) {
     await visit('/');
 
     assert.equal(currentURL(), '/');
-  });
+  });*/
 });
