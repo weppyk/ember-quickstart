@@ -269,8 +269,22 @@
     location: _environment.default.locationType,
     rootURL: _environment.default.rootURL
   });
-  Router.map(function () {});
+  Router.map(function () {
+    this.route('about');
+  });
   var _default = Router;
+  _exports.default = _default;
+});
+;define("ember-quickstart/routes/about", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.Route.extend({});
+
   _exports.default = _default;
 });
 ;define("ember-quickstart/services/ajax", ["exports", "ember-ajax/services/ajax"], function (_exports, _ajax) {
@@ -285,6 +299,24 @@
       return _ajax.default;
     }
   });
+});
+;define("ember-quickstart/templates/about", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.HTMLBars.template({
+    "id": "81DfIV4S",
+    "block": "{\"symbols\":[],\"statements\":[[7,\"div\"],[11,\"class\",\"jumbo\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"right tomster\"],[9],[10],[0,\"\\n  \"],[7,\"h2\"],[9],[0,\"About Super Rentals\"],[10],[0,\"\\n  \"],[7,\"p\"],[9],[0,\"\\n    The Super Rentals website is a delightful project created to explore Ember.\\n    By building a property rental site, we can simultaneously imagine traveling\\n    AND building Ember applications.\\n  \"],[10],[0,\"\\n\"],[10]],\"hasEval\":false}",
+    "meta": {
+      "moduleName": "ember-quickstart/templates/about.hbs"
+    }
+  });
+
+  _exports.default = _default;
 });
 ;define("ember-quickstart/templates/application", ["exports"], function (_exports) {
   "use strict";
@@ -327,7 +359,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("ember-quickstart/app")["default"].create({"name":"ember-quickstart","version":"0.1+90c9b10e"});
+            require("ember-quickstart/app")["default"].create({"name":"ember-quickstart","version":"0.2+50a8b428"});
           }
         
 //# sourceMappingURL=ember-quickstart.map
