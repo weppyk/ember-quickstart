@@ -273,6 +273,7 @@
     this.route('about');
     this.route('contact');
     this.route('rentals');
+    this.route('zonky');
   });
   var _default = Router;
   _exports.default = _default;
@@ -327,6 +328,25 @@
   _exports.default = void 0;
 
   var _default = Ember.Route.extend({});
+
+  _exports.default = _default;
+});
+;define("ember-quickstart/routes/zonky", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.Route.extend({
+    model() {
+      return this.store.query('post', {
+        favorite: true
+      });
+    }
+
+  });
 
   _exports.default = _default;
 });
@@ -428,6 +448,24 @@
     "block": "{\"symbols\":[],\"statements\":[[7,\"div\"],[11,\"class\",\"jumbo\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"right tomster\"],[9],[10],[0,\"\\n  \"],[7,\"h2\"],[9],[0,\"Welcome!\"],[10],[0,\"\\n  \"],[7,\"p\"],[9],[0,\"We hope you find exactly what you're looking for in a place to stay.\"],[10],[0,\"\\n\"],[4,\"link-to\",[\"about\"],[[\"class\"],[\"button\"]],{\"statements\":[[0,\"    About Us\\n\"]],\"parameters\":[]},null],[10]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-quickstart/templates/rentals.hbs"
+    }
+  });
+
+  _exports.default = _default;
+});
+;define("ember-quickstart/templates/zonky", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.HTMLBars.template({
+    "id": "0WbY6Zw4",
+    "block": "{\"symbols\":[\"post\"],\"statements\":[[7,\"h1\"],[9],[0,\"Favorite Posts\"],[10],[0,\"\\n\"],[4,\"each\",[[23,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[7,\"p\"],[9],[1,[22,1,[\"body\"]],false],[10],[0,\"\\n\"]],\"parameters\":[1]},null]],\"hasEval\":false}",
+    "meta": {
+      "moduleName": "ember-quickstart/templates/zonky.hbs"
     }
   });
 

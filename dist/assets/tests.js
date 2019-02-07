@@ -61,6 +61,10 @@ define("ember-quickstart/tests/lint/app.lint-test", [], function () {
     assert.expect(1);
     assert.ok(true, 'routes/rentals.js should pass ESLint\n\n');
   });
+  QUnit.test('routes/zonky.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/zonky.js should pass ESLint\n\n');
+  });
 });
 define("ember-quickstart/tests/lint/templates.template.lint-test", [], function () {
   "use strict";
@@ -85,6 +89,10 @@ define("ember-quickstart/tests/lint/templates.template.lint-test", [], function 
   QUnit.test('ember-quickstart/templates/rentals.hbs', function (assert) {
     assert.expect(1);
     assert.ok(true, 'ember-quickstart/templates/rentals.hbs should pass TemplateLint.\n\n');
+  });
+  QUnit.test('ember-quickstart/templates/zonky.hbs', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'ember-quickstart/templates/zonky.hbs should pass TemplateLint.\n\n');
   });
 });
 define("ember-quickstart/tests/lint/tests.lint-test", [], function () {
@@ -114,6 +122,10 @@ define("ember-quickstart/tests/lint/tests.lint-test", [], function () {
   QUnit.test('unit/routes/rentals-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/rentals-test.js should pass ESLint\n\n');
+  });
+  QUnit.test('unit/routes/zonky-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/zonky-test.js should pass ESLint\n\n');
   });
 });
 define("ember-quickstart/tests/test-helper", ["ember-quickstart/app", "ember-quickstart/config/environment", "@ember/test-helpers", "ember-qunit"], function (_app, _environment, _testHelpers, _emberQunit) {
@@ -162,6 +174,17 @@ define("ember-quickstart/tests/unit/routes/rentals-test", ["qunit", "ember-qunit
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
       let route = this.owner.lookup('route:rentals');
+      assert.ok(route);
+    });
+  });
+});
+define("ember-quickstart/tests/unit/routes/zonky-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Route | zonky', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:zonky');
       assert.ok(route);
     });
   });
