@@ -56,7 +56,7 @@ define("ember-quickstart/tests/lint/templates.template.lint-test", [], function 
   });
   QUnit.test('ember-quickstart/templates/contact.hbs', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'ember-quickstart/templates/contact.hbs should pass TemplateLint.\n\n');
+    assert.ok(false, 'ember-quickstart/templates/contact.hbs should pass TemplateLint.\n\nember-quickstart/templates/contact.hbs\n  17:4  error  Incorrect indentation for `{{#link-to}}` beginning at L17:C4. Expected `{{#link-to}}` to be at an indentation of 2 but was found at 4.  block-indentation\n  19:14  error  Incorrect indentation for `link-to` beginning at L17:C4. Expected `{{/link-to}}` ending at L19:C14 to be at an indentation of 4 but was found at 2.  block-indentation\n  18:0  error  Incorrect indentation for `    About\n` beginning at L18:C0. Expected `    About\n` to be at an indentation of 6 but was found at 4.  block-indentation\n');
   });
 });
 define("ember-quickstart/tests/lint/tests.lint-test", [], function () {
