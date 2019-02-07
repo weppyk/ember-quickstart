@@ -272,6 +272,7 @@
   Router.map(function () {
     this.route('about');
     this.route('contact');
+    this.route('rentals');
   });
   var _default = Router;
   _exports.default = _default;
@@ -289,6 +290,35 @@
   _exports.default = _default;
 });
 ;define("ember-quickstart/routes/contact", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.Route.extend({});
+
+  _exports.default = _default;
+});
+;define("ember-quickstart/routes/index", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.Route.extend({
+    beforeModel() {
+      this.replaceWith('rentals');
+    }
+
+  });
+
+  _exports.default = _default;
+});
+;define("ember-quickstart/routes/rentals", ["exports"], function (_exports) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -362,6 +392,42 @@
     "block": "{\"symbols\":[],\"statements\":[[7,\"div\"],[11,\"class\",\"jumbo\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"right tomster\"],[9],[10],[0,\"\\n  \"],[7,\"h2\"],[9],[0,\"Contact Us\"],[10],[0,\"\\n  \"],[7,\"p\"],[9],[0,\"\\n    Super Rentals Representatives would love to help you\"],[7,\"br\"],[9],[10],[0,\"\\n    choose a destination or answer any questions you may have.\\n  \"],[10],[0,\"\\n  \"],[7,\"address\"],[9],[0,\"\\n    Super Rentals HQ\\n    \"],[7,\"p\"],[9],[0,\"\\n      1212 Test Address Avenue\"],[7,\"br\"],[9],[10],[0,\"\\n      Testington, OR 97233\\n    \"],[10],[0,\"\\n    \"],[7,\"a\"],[11,\"href\",\"tel:503.555.1212\"],[9],[0,\"+1 (503) 555-1212\"],[10],[7,\"br\"],[9],[10],[0,\"\\n    \"],[7,\"a\"],[11,\"href\",\"mailto:superrentalsrep@emberjs.com\"],[9],[0,\"superrentalsrep@emberjs.com\"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"],[4,\"link-to\",[\"about\"],[[\"class\"],[\"button\"]],{\"statements\":[[0,\"    About\\n\"]],\"parameters\":[]},null],[10]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-quickstart/templates/contact.hbs"
+    }
+  });
+
+  _exports.default = _default;
+});
+;define("ember-quickstart/templates/index", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.HTMLBars.template({
+    "id": "nDHq+LEh",
+    "block": "{\"symbols\":[],\"statements\":[[1,[21,\"outlet\"],false]],\"hasEval\":false}",
+    "meta": {
+      "moduleName": "ember-quickstart/templates/index.hbs"
+    }
+  });
+
+  _exports.default = _default;
+});
+;define("ember-quickstart/templates/rentals", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.HTMLBars.template({
+    "id": "8X7eNJGd",
+    "block": "{\"symbols\":[],\"statements\":[[7,\"div\"],[11,\"class\",\"jumbo\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"right tomster\"],[9],[10],[0,\"\\n  \"],[7,\"h2\"],[9],[0,\"Welcome!\"],[10],[0,\"\\n  \"],[7,\"p\"],[9],[0,\"We hope you find exactly what you're looking for in a place to stay.\"],[10],[0,\"\\n\"],[4,\"link-to\",[\"about\"],[[\"class\"],[\"button\"]],{\"statements\":[[0,\"    About Us\\n\"]],\"parameters\":[]},null],[10]],\"hasEval\":false}",
+    "meta": {
+      "moduleName": "ember-quickstart/templates/rentals.hbs"
     }
   });
 

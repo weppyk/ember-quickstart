@@ -41,6 +41,14 @@ define("ember-quickstart/tests/lint/app.lint-test", [], function () {
     assert.expect(1);
     assert.ok(true, 'routes/contact.js should pass ESLint\n\n');
   });
+  QUnit.test('routes/index.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/index.js should pass ESLint\n\n');
+  });
+  QUnit.test('routes/rentals.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/rentals.js should pass ESLint\n\n');
+  });
 });
 define("ember-quickstart/tests/lint/templates.template.lint-test", [], function () {
   "use strict";
@@ -57,6 +65,14 @@ define("ember-quickstart/tests/lint/templates.template.lint-test", [], function 
   QUnit.test('ember-quickstart/templates/contact.hbs', function (assert) {
     assert.expect(1);
     assert.ok(false, 'ember-quickstart/templates/contact.hbs should pass TemplateLint.\n\nember-quickstart/templates/contact.hbs\n  17:4  error  Incorrect indentation for `{{#link-to}}` beginning at L17:C4. Expected `{{#link-to}}` to be at an indentation of 2 but was found at 4.  block-indentation\n  19:14  error  Incorrect indentation for `link-to` beginning at L17:C4. Expected `{{/link-to}}` ending at L19:C14 to be at an indentation of 4 but was found at 2.  block-indentation\n  18:0  error  Incorrect indentation for `    About\n` beginning at L18:C0. Expected `    About\n` to be at an indentation of 6 but was found at 4.  block-indentation\n');
+  });
+  QUnit.test('ember-quickstart/templates/index.hbs', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'ember-quickstart/templates/index.hbs should pass TemplateLint.\n\n');
+  });
+  QUnit.test('ember-quickstart/templates/rentals.hbs', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'ember-quickstart/templates/rentals.hbs should pass TemplateLint.\n\n');
   });
 });
 define("ember-quickstart/tests/lint/tests.lint-test", [], function () {
@@ -78,6 +94,14 @@ define("ember-quickstart/tests/lint/tests.lint-test", [], function () {
   QUnit.test('unit/routes/contact-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/contact-test.js should pass ESLint\n\n');
+  });
+  QUnit.test('unit/routes/index-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/index-test.js should pass ESLint\n\n');
+  });
+  QUnit.test('unit/routes/rentals-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/rentals-test.js should pass ESLint\n\n');
   });
 });
 define("ember-quickstart/tests/test-helper", ["ember-quickstart/app", "ember-quickstart/config/environment", "@ember/test-helpers", "ember-qunit"], function (_app, _environment, _testHelpers, _emberQunit) {
@@ -104,6 +128,28 @@ define("ember-quickstart/tests/unit/routes/contact-test", ["qunit", "ember-qunit
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
       let route = this.owner.lookup('route:contact');
+      assert.ok(route);
+    });
+  });
+});
+define("ember-quickstart/tests/unit/routes/index-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Route | index', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:index');
+      assert.ok(route);
+    });
+  });
+});
+define("ember-quickstart/tests/unit/routes/rentals-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Route | rentals', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:rentals');
       assert.ok(route);
     });
   });
